@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper,hidelinks]{memoir}
+
+\usepackage{ulem}
+\usepackage{incgraph}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\usetikzlibrary{mindmap,shadows}
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+\begin{inctext}
+        \begin{tikzpicture}
+                \begin{scope}[
+                                % align=flush center,
+                                mindmap,
+                                grow cyclic,
+                                concept color=black,
+                                every child/.append style={text width=4cm,level distance=14cm,font=\fontsize{10pt}{12pt}},
+                                every node/.append style={concept,circular drop shadow},
+                                % level 1/.append style={sibling angle=360/6}
+                        ]
+                        \node[root concept, fill=white](study){
+                                What do you want to do
+                        }
+                        child[concept color=orange]{
+                                        node{
+                                                        Run Maplestory Priviate Server on Linux
+                                                }
+                                        child{
+                                                        node{
+                                                                        MySQL
+                                                                }
+                                                }
+                                        child{
+                                                        node{
+                                                                        Java
+                                                                }
+                                                }
+                                        child{
+                                                        node{
+                                                                        Network
+                                                                }
+                                                }
+                                        child{
+                                                        node{
+                                                                        Javascript
+                                                                }
+                                                }
+                                }
+                        child[concept color=blue,white]{
+                                        node{
+                                                        Hack PSP Yugioh Game
+                                                }
+                                }
+                        child[concept color=gray]{
+                                        node{
+                                                        Know How Computer Works
+                                                }
+                                        child{
+                                                        node{
+                                                                        How Electricity Works
+                                                                }
+                                                }
+                                }
+                        child[concept color=red,white]{
+                                        node{
+                                                        Make the Habit which Makes me Study All the Time
+                                                }
+                                        child{
+                                                        node{
+                                                                        Sapiens
+                                                                }
+                                                }
+                                }
+                        ;
+                \end{scope}
+        \end{tikzpicture}
+\end{inctext}
+\end{document}
