@@ -17,6 +17,9 @@
 \begin{document}
 \begin{inctext}
         \begin{tikzpicture}
+                \pgfdeclarelayer{background}
+                \pgfdeclarelayer{foreground}
+                \pgfsetlayers{background,main,foreground}
                 \begin{scope}[
                                 % align=flush center,
                                 mindmap,
@@ -26,15 +29,15 @@
                                 every node/.append style={concept,circular drop shadow},
                                 % level 1/.append style={sibling angle=360/6}
                         ]
-                        \node[root concept, fill=white](study){
+                        \node[root concept, fill=white](main){
                                 What do you want to do
                         }
-                        child[concept color=orange]{
-                                        node{
+                        child[concept color=orange, level distance=21cm]{
+                                        node[fill=white](maplestory){
                                                         Run Maplestory Priviate Server on Linux
                                                 }
                                         child{
-                                                        node{
+                                                        node(mysql){
                                                                         MySQL
                                                                 }
                                                 }
@@ -54,13 +57,13 @@
                                                                 }
                                                 }
                                 }
-                        child[concept color=blue,white]{
-                                        node{
+                        child[concept color=blue]{
+                                        node[fill=white](yugioh){
                                                         Hack PSP Yugioh Game
                                                 }
                                 }
-                        child[concept color=gray]{
-                                        node{
+                        child[concept color=red!50!green!30]{
+                                        node[fill=white](computer){
                                                         Know How Computer Works
                                                 }
                                         child{
@@ -69,18 +72,57 @@
                                                                 }
                                                 }
                                 }
-                        child[concept color=red,white]{
-                                        node{
-                                                        Make the Habit which Makes me Study All the Time
+                        child[concept color=red]{
+                                        node[fill=white]{
+                                                        Make a Habit which Makes me Study All the Time
                                                 }
-                                        child{
+                                        child[white]{
                                                         node{
-                                                                        Sapiens
+                                                                        Know Yourself
+                                                                }
+                                                        child{
+                                                                        node(sapiens){
+                                                                                        Sapiens
+                                                                                }
+                                                                }
+                                                        child{
+                                                                        node(distraction){
+                                                                                        \href{./distraction_flow/distraction_flow.pdf}{Distraction Flow}
+                                                                                }
+                                                                }
+                                                }
+                                        child[white]{
+                                                        node{
+                                                                        Study Effectively
                                                                 }
                                                 }
                                 }
                         ;
                 \end{scope}
+                % ------------------------ background ------------------------ %
+                \begin{pgfonlayer}{background}
+                \end{pgfonlayer}
+                % ------------------------ foreground ------------------------ %
+                \begin{pgfonlayer}{foreground}
+                        \node[text width=1.2cm, text height=1.2cm,yshift=-1.2cm] at (yugioh) {
+                                \includegraphics[width=1.2cm,height=1.2cm]{./image/psp.png}
+                        };
+                        \node[text width=1.2cm, text height=1.2cm,yshift=-1.2cm] at (maplestory) {
+                                \includegraphics[width=1.2cm,height=1.2cm]{./image/maple.png}
+                        };
+                        \node[text width=1.2cm, text height=1.2cm,yshift=-1cm] at (sapiens) {
+                                \href{../../Documents/sapiens.pdf}{\includegraphics[width=1.2cm,height=1.2cm]{./image/book2.png}}
+                        };
+                        \node[text width=1.2cm, text height=1.2cm,yshift=-1.2cm] at (computer) {
+                                \includegraphics[width=1.2cm,height=1.2cm]{./image/computer.png}
+                        };
+                        \node[text width=1.2cm, text height=1.2cm,yshift=-1.1cm] at (mysql) {
+                                \includegraphics[width=1.2cm,height=1.2cm]{./image/mysql.png}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (distraction) {
+                                \href{./distraction_flow/distraction_flow.pdf}{\includegraphics[width=1.5cm,height=1.5cm]{./image/link2.png}}
+                        };
+                \end{pgfonlayer}
         \end{tikzpicture}
 \end{inctext}
 \end{document}
