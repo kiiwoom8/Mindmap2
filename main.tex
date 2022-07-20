@@ -6,7 +6,6 @@
 \usepackage{hyperref}
 
 \usetikzlibrary{mindmap,shadows}
-
 \hypersetup{
     colorlinks=false,
     linkcolor=black,
@@ -68,7 +67,22 @@
                                                 }
                                         child{
                                                         node{
-                                                                        How Electricity Works
+                                                                        \href{https://www.computerhope.com/issues/ch001263.htm}{How does a Computer Work?}
+                                                                }
+                                                        child{
+                                                                        node(ac){
+                                                                                        \href{https://www.youtube.com/watch?v=q-DKc4KHPqU}{What is AC}
+                                                                                }
+                                                                        child{
+                                                                                        node(transformer){
+                                                                                                        \href{https://www.youtube.com/watch?v=agujzHdvtjc}{Transformer}
+                                                                                                }
+                                                                                }
+                                                                        child{
+                                                                                        node{
+                                                                                                        \href{https://www.electricalclassroom.com/why-is-electricity-transmitted-at-high-voltages/}{Why Transmitted in High Voltage?}
+                                                                                                }
+                                                                                }
                                                                 }
                                                 }
                                 }
@@ -121,6 +135,12 @@
                         };
                         \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (distraction) {
                                 \href{./distraction_flow/distraction_flow.pdf}{\includegraphics[width=1.5cm,height=1.5cm]{./image/link2.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (ac) {
+                                \href{https://www.youtube.com/watch?v=q-DKc4KHPqU}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (transformer) {
+                                \href{https://www.youtube.com/watch?v=agujzHdvtjc}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube.png}}
                         };
                 \end{pgfonlayer}
         \end{tikzpicture}
