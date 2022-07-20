@@ -31,29 +31,9 @@
                         \node[root concept, fill=white](main){
                                 What do you want to do
                         }
-                        child[concept color=orange, level distance=21cm]{
+                        child[concept color=orange]{
                                         node[fill=white](maplestory){
                                                         Run Maplestory Priviate Server on Linux
-                                                }
-                                        child{
-                                                        node(mysql){
-                                                                        MySQL
-                                                                }
-                                                }
-                                        child{
-                                                        node{
-                                                                        Java
-                                                                }
-                                                }
-                                        child{
-                                                        node{
-                                                                        Network
-                                                                }
-                                                }
-                                        child{
-                                                        node{
-                                                                        Javascript
-                                                                }
                                                 }
                                 }
                         child[concept color=blue]{
@@ -129,9 +109,6 @@
                         };
                         \node[text width=1.2cm, text height=1.2cm,yshift=-1.2cm] at (computer) {
                                 \includegraphics[width=1.2cm,height=1.2cm]{./image/computer.png}
-                        };
-                        \node[text width=1.2cm, text height=1.2cm,yshift=-1.1cm] at (mysql) {
-                                \includegraphics[width=1.2cm,height=1.2cm]{./image/mysql.png}
                         };
                         \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (distraction) {
                                 \href{./distraction_flow/distraction_flow.pdf}{\includegraphics[width=1.5cm,height=1.5cm]{./image/link2.png}}
