@@ -40,6 +40,36 @@
                                         node[fill=white](yugioh){
                                                         Hack PSP Yugioh Game
                                                 }
+                                        child[concept color=gray, white]{
+                                                        node{
+                                                                        \href{https://en.wikipedia.org/wiki/Binary_file}{Binary File}
+                                                                }
+                                                        child[concept color=gray]{
+                                                                        node{
+                                                                                        \href{https://en.wikipedia.org/wiki/Binary-to-text_encoding}{Binary to Text Encoding}
+                                                                                }
+                                                                        child[concept color=gray]{
+                                                                                        node(base64){
+                                                                                                        \href{https://www.youtube.com/watch?v=8qkxeZmKmOYgg}{What is Base64}
+                                                                                                }
+                                                                                }
+                                                                        child[concept color=gray]{
+                                                                                        node{
+                                                                                                        \href{https://www.geeksforgeeks.org/multipurpose-internet-mail-extension-mime-protocol/}{What is MIME}
+                                                                                                }
+                                                                                        child[concept color=gray]{
+                                                                                                        node{
+                                                                                                                        \href{https://support.microsoft.com/en-us/office/what-are-imap-and-pop-ca2c5799-49f9-4079-aefe-ddca85d5b1c9}{What are IMAP and POP}
+                                                                                                                }
+                                                                                                }
+                                                                                        child[concept color=gray]{
+                                                                                                        node{
+                                                                                                                        \href{https://www.techopedia.com/definition/1691/message-transfer-agent-mta}{What is MTA}
+                                                                                                                }
+                                                                                                }
+                                                                                }
+                                                                }
+                                                }
                                 }
                         child[concept color=red!50!green!30]{
                                         node[fill=white](computer){
@@ -61,6 +91,21 @@
                                                                         child{
                                                                                         node{
                                                                                                         \href{https://www.electricalclassroom.com/why-is-electricity-transmitted-at-high-voltages/}{Why Transmitted in High Voltage?}
+                                                                                                }
+                                                                                        child{
+                                                                                                        node(elecp){
+                                                                                                                        \href{https://www.youtube.com/watch?v=iI3ym3Wu9i0}{Electrical Power}
+                                                                                                                }
+                                                                                                        child{
+                                                                                                                        node{
+                                                                                                                                        \href{https://galileoandeinstein.phys.virginia.edu/lectures/momentum.html}{Momentum, Work and Energy}
+                                                                                                                                }
+                                                                                                                        child{
+                                                                                                                                        node{
+                                                                                                                                                        \href{https://www.aps.org/programs/outreach/physicsquest/past/falling-physics.cfm}{Falling Physics}
+                                                                                                                                                }
+                                                                                                                                }
+                                                                                                                }
                                                                                                 }
                                                                                 }
                                                                 }
@@ -88,6 +133,11 @@
                                         child[white]{
                                                         node{
                                                                         Study Effectively
+                                                                }
+                                                        child{
+                                                                        node{
+                                                                                        \href{https://www.edutopia.org/article/neuroscience-behind-productive-struggle}{Productive Struggling}
+                                                                                }
                                                                 }
                                                 }
                                 }
@@ -118,6 +168,12 @@
                         };
                         \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (transformer) {
                                 \href{https://www.youtube.com/watch?v=agujzHdvtjc}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (elecp) {
+                                \href{https://www.youtube.com/watch?v=iI3ym3Wu9i0}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (base64) {
+                                \href{https://www.youtube.com/watch?v=8qkxeZmKmOYgg}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube2.png}}
                         };
                 \end{pgfonlayer}
         \end{tikzpicture}
