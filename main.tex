@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 
 \usetikzlibrary{mindmap,shadows}
+\tikzset{todo/.append style={annotation,above,concept color=white,draw=black,text width=2cm,align=center}}
 \hypersetup{
     colorlinks=false,
     linkcolor=black,
@@ -107,6 +108,46 @@
                                                                                         node{
                                                                                                         \href{https://stackoverflow.com/questions/1658294/whats-the-purpose-of-the-lea-instruction}{Purpose of lea}
                                                                                                 }
+                                                                                        child{
+                                                                                                        node{
+                                                                                                                        \href{https://en.wikipedia.org/wiki/Struct_(C_programming_language)}{C Struct}
+                                                                                                                }
+                                                                                                        child{
+                                                                                                                        node(struct){
+                                                                                                                                        \href{https://www.youtube.com/watch?v=ucbEjsXfyh4}{Struct}
+                                                                                                                                }
+                                                                                                                        child{
+                                                                                                                                        node{
+                                                                                                                                                        \href{https://www.geeksforgeeks.org/strcpy-in-c-cpp/}{strcpy in C}
+                                                                                                                                                }
+                                                                                                                                        child[concept color=gray]{
+                                                                                                                                                        node{
+                                                                                                                                                                        \href{https://www.geeksforgeeks.org/difference-between-gcc-and-g/}{Difference between gcc and g++}
+                                                                                                                                                                }
+                                                                                                                                                }
+                                                                                                                                        child{
+                                                                                                                                                        node{
+                                                                                                                                                                        \href{https://stackoverflow.com/questions/6901090/c-why-is-strcpy-necessary}{Why is strcpy() Necessary}
+                                                                                                                                                                }
+                                                                                                                                                        child{
+                                                                                                                                                                        node{
+                                                                                                                                                                                        \href{https://stackoverflow.com/questions/11031732/what-is-the-difference-between-primitive-data-type-vs-an-non-primitive-data-type}{Difference between primitive and non-primitive data}
+                                                                                                                                                                                }
+                                                                                                                                                                        child{
+                                                                                                                                                                                        node(reference){
+                                                                                                                                                                                                        \href{https://www.youtube.com/watch?v=9ooYYRLdg_g}{Reference\\vs\\Primitive Values}
+                                                                                                                                                                                                }
+                                                                                                                                                                                        child{
+                                                                                                                                                                                                        node{
+                                                                                                                                                                                                                        \href{https://cs.stackexchange.com/questions/123576/why-are-primitive-types-stored-in-a-stack-in-systems-level-software}{Stack}
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                }
+                                                                                                                                                                                }
+                                                                                                                                                                }
+                                                                                                                                                }
+                                                                                                                                }
+                                                                                                                }
+                                                                                                }
                                                                                 }
                                                                 }
                                                 }
@@ -146,8 +187,39 @@
                                                                                                                                         \href{https://galileoandeinstein.phys.virginia.edu/lectures/momentum.html}{Momentum, Work and Energy}
                                                                                                                                 }
                                                                                                                         child{
-                                                                                                                                        node{
+                                                                                                                                        node(fphysics){
                                                                                                                                                         \href{https://www.aps.org/programs/outreach/physicsquest/past/falling-physics.cfm}{Falling Physics}
+                                                                                                                                                }
+                                                                                                                                        child[concept color=gray]{
+                                                                                                                                                        node(ntl){
+                                                                                                                                                                        \href{https://www.youtube.com/watch?v=TVAxASr0iUY}{Newton's Third Law}
+                                                                                                                                                                }
+                                                                                                                                                }
+                                                                                                                                        child{
+                                                                                                                                                        node(gvisual){
+                                                                                                                                                                        \href{https://www.youtube.com/watch?v=MTY1Kje0yLg}{Gravity Visualized}
+                                                                                                                                                                }
+                                                                                                                                                        child{
+                                                                                                                                                                        node{
+                                                                                                                                                                                        \href{https://en.wikipedia.org/wiki/Gravity}{Gravity}
+                                                                                                                                                                                }
+                                                                                                                                                                        child{
+                                                                                                                                                                                        node{
+                                                                                                                                                                                                        \href{https://www.youtube.com/watch?v=669QUJrF4u0}{Four Fundamental Forces of Nature}
+                                                                                                                                                                                                }
+                                                                                                                                                                                        child{
+                                                                                                                                                                                                        node{
+                                                                                                                                                                                                                        \href{https://www.youtube.com/watch?v=xZqID1zSm0k}{Why \& How do the 4 fundamental forces of nature work?
+                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                        child{
+                                                                                                                                                                                                                        node{
+                                                                                                                                                                                                                                        \href{https://en.wikipedia.org/wiki/Standard_Model}{Standard Model}
+                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                }
+                                                                                                                                                                                }
+                                                                                                                                                                }
                                                                                                                                                 }
                                                                                                                                 }
                                                                                                                 }
@@ -166,10 +238,10 @@
                                                                 }
                                                         child{
                                                                         node(sapiens){
-                                                                                        Sapiens
+                                                                                        \href{../../Documents/sapiens.pdf}{Sapiens}
                                                                                 }
                                                                 }
-                                                        child{
+                                                        child[concept color=gray]{
                                                                         node(distraction){
                                                                                         \href{./distraction_flow/distraction_flow.pdf}{Distraction Flow}
                                                                                 }
@@ -179,9 +251,19 @@
                                                         node{
                                                                         Study Effectively
                                                                 }
-                                                        child{
+                                                        child[concept color=gray]{
                                                                         node{
                                                                                         \href{https://www.edutopia.org/article/neuroscience-behind-productive-struggle}{Productive Struggling}
+                                                                                }
+                                                                }
+                                                        child[concept color=gray]{
+                                                                        node{
+                                                                                        \href{https://gsi.berkeley.edu/gsi-guide-contents/learning-theory-research/neuroscience/}{How Students Learn}
+                                                                                }
+                                                                        child[concept color=gray]{
+                                                                                        node{
+                                                                                                        \href{https://www.webmd.com/a-to-z-guides/what-is-cortisol}{What is Cortisol}
+                                                                                                }
                                                                                 }
                                                                 }
                                                 }
@@ -193,6 +275,8 @@
                 \end{pgfonlayer}
                 % ------------------------ foreground ------------------------ %
                 \begin{pgfonlayer}{foreground}
+                        \node[todo,xshift=-1cm,yshift=-.4cm] at (fphysics.west) {TODO:\\ Why Same Acceleation};
+                        
                         \node[text width=1.2cm, text height=1.2cm,yshift=-1.2cm] at (yugioh) {
                                 \includegraphics[width=1.2cm,height=1.2cm]{./image/psp.png}
                         };
@@ -219,6 +303,18 @@
                         };
                         \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (base64) {
                                 \href{https://www.youtube.com/watch?v=8qkxeZmKmOYgg}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube2.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (struct) {
+                                \href{https://www.youtube.com/watch?v=ucbEjsXfyh4}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube2.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (ntl) {
+                                \href{https://www.youtube.com/watch?v=TVAxASr0iUY}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube2.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (gvisual) {
+                                \href{https://www.youtube.com/watch?v=MTY1Kje0yLg}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube2.png}}
+                        };
+                        \node[text width=1.5cm, text height=1.5cm,yshift=-1.1cm] at (reference) {
+                                \href{https://www.youtube.com/watch?v=9ooYYRLdg_g}{\includegraphics[width=1.5cm,height=1.5cm]{./image/youtube2.png}}
                         };
                 \end{pgfonlayer}
         \end{tikzpicture}
